@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>eu.celar</groupId>
+  <artifactId>distribution</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>CELAR Distribution (POM)</name>
+  <url>http://celarcloud.eu/</url>
+
+  <organization>
+    <name>CELAR</name>
+    <url>http://celarcloud.eu/</url>
+  </organization>
+
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://snf-153388.vm.okeanos.grnet.gr/</url>
+  </ciManagement>
+
+  <prerequisites>
+    <maven>3.0.3</maven>
+  </prerequisites>
+
+  <distributionManagement>
+      <repository>
+          <id>celar.releases</id>
+          <name>CELAR Releases</name>
+          <url>https://snf-153390.vm.okeanos.grnet.gr/nexus/content/repositories/releases</url>
+      </repository>
+      <snapshotRepository>
+          <id>celar.snapshots</id>
+          <name>CELAR Snapshots</name>
+          <url>https://snf-153390.vm.okeanos.grnet.gr/nexus/content/repositories/snapshots</url>
+      </snapshotRepository>
+  </distributionManagement>
+
+</project>
