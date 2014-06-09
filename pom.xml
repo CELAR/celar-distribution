@@ -23,6 +23,23 @@
     <maven>3.0.3</maven>
   </prerequisites>
 
+  <properties>
+    <celar.install.dir>/opt/celar</celar.install.dir>
+    <package.os>el6</package.os>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>rpm-maven-plugin</artifactId>
+            <version>2.0.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   <distributionManagement>
       <repository>
           <id>celar.releases</id>
