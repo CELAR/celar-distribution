@@ -26,6 +26,12 @@
   <properties>
     <celar.install.dir>/opt/celar</celar.install.dir>
     <package.os>el6</package.os>
+    <!-- Provide default value to avoid the need for an explicit   -->
+    <!-- command line option.  This value will still be overridden -->
+    <!-- by the command line option value when used, e.g. in the   -->
+    <!-- continuous integration system.                            -->
+    <BUILD_NUMBER>0</BUILD_NUMBER>
+    <slipstream.version>2.6-SNAPSHOT</slipstream.version>
   </properties>
 
   <build>
@@ -51,6 +57,33 @@
           <name>CELAR Snapshots</name>
           <url>http://snf-175960.vm.okeanos.grnet.gr/nexus/content/repositories/snapshots</url>
       </snapshotRepository>
+
   </distributionManagement>
+
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>slipstream.releases</id>
+            <name>SlipStream Releases</name>
+            <url>http://nexus.sixsq.com/content/repositories/releases-community</url>
+        </repository>
+
+        <repository>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>slipstream.snapshots</id>
+            <name>SlipStream Snapshots</name>
+            <url>http://nexus.sixsq.com/content/repositories/snapshots-community</url>
+        </repository>
+    </repositories>
 
 </project>
