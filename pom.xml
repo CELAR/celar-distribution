@@ -31,7 +31,7 @@
     <!-- by the command line option value when used, e.g. in the   -->
     <!-- continuous integration system.                            -->
     <BUILD_NUMBER>0</BUILD_NUMBER>
-    <slipstream.version>2.3.0</slipstream.version>
+    <slipstream.version>2.11</slipstream.version>
   </properties>
 
   <build>
